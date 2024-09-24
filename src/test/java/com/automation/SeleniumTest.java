@@ -10,6 +10,7 @@ import org.testng.annotations.Test;
 import java.time.Duration;
 
 //import static java.time.Duration.*;
+import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 public class SeleniumTest extends BaseTest{
@@ -42,7 +43,7 @@ public class SeleniumTest extends BaseTest{
     public void clickAddToCartButton(){
         waitUntilElementVisibleByCssSelector(".btn-success");
         getDriver().findElement(By.cssSelector(".btn-success")).click();
-        getDriver().switchTo().alert().accept();
+//        getDriver().switchTo().alert().accept();
     }
 
     @Step("Click cart menu")
